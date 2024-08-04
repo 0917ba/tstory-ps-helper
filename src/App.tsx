@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
+        <p className="bg-red-200">
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
