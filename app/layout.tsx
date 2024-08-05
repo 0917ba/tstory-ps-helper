@@ -22,9 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cn(noto_sans_kr.className, 'bg-slate-50 text-slate-900')}
-      >
+      <body className={cn(noto_sans_kr.className, ' text-slate-900')}>
         {children}
       </body>
     </html>
