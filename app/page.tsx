@@ -5,7 +5,7 @@ import ProblemCardWrapper from '@/components/ProblemCardWrapper';
 export default function Page() {
   return (
     <main className=" flex flex-col items-center justify-center h-screen bg-transparent">
-      <div className="mb-12 flex flex-col items-center gap-6 text-center w-full">
+      <div className="mb-12 flex flex-col items-center gap-10 text-center w-full">
         <h1 className="text-4xl font-bold tracking-tighter">
           🖥️ Tstory PS Helper
         </h1>
