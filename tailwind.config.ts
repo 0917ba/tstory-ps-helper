@@ -52,7 +52,7 @@ const config: Config = {
         'silver-light': '#f4f4f5',
         'gold-light': '#fef3c7',
         'platinum-light': '#ccfbf1',
-        'diamond-light': '#e0f2fe',
+        'diamond-light': '#dbeafe',
         'ruby-light': '#ffe4e6',
       },
       borderRadius: {
