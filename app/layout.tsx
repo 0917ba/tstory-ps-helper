@@ -10,9 +10,8 @@ const noto_sans_kr = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: 'Tstory PS Helper',
-
-  description: 'Tstory PS Helper',
+  title: 'Tistory PS Helper',
+  description: 'Tistory PS Helper',
 };
 
 export default function RootLayout({

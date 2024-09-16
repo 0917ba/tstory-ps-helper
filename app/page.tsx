@@ -7,7 +7,7 @@ export default function Page() {
     <main className=" flex flex-col items-center justify-center h-screen bg-transparent">
       <div className="mb-12 flex flex-col items-center gap-10 text-center w-full">
         <h1 className="text-4xl font-bold tracking-tighter">
-          🖥️ Tstory PS Helper
+          🖥️ Tistory PS Helper
         </h1>
         <div className="flex items-center w-full max-w-md gap-5">
           <Input
