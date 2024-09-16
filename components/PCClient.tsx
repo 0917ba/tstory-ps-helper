@@ -2,25 +2,52 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import { ItemTypes } from '@/lib/dnd';
+import { getTierByLevel } from '@/lib/solvedAPI';
 import { cn } from '@/lib/utils';
-import { ProblemInfo } from '@/types/solved';
+import { ProblemInfo, Tier } from '@/types/solved';
+import { useEffect, useState } from 'react';
 import { useDrag } from 'react-dnd';
 
 interface ProblemCardProps {
-  className?: string;
   problemInfo: ProblemInfo;
 }
 
-export function ProblemCardClient({
-  className,
-  problemInfo,
-}: ProblemCardProps) {
+export function ProblemCardClient({ problemInfo }: ProblemCardProps) {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: ItemTypes.CARD,
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),
   }));
+
+  const [className, setClassName] = useState('');
+
+  useEffect(() => {
+    const problemTier = getTierByLevel(problemInfo.level);
+
+    switch (problemTier.tier) {
+      case 'bronze':
+        setClassName('bg-bronze-light');
+        break;
+      case 'silver':
+        setClassName('bg-silver-light');
+        break;
+      case 'gold':
+        setClassName('bg-gold-light');
+        break;
+      case 'platinum':
+        setClassName('bg-platinum-light');
+        break;
+      case 'diamond':
+        setClassName('bg-diamond-light');
+        break;
+      case 'ruby':
+        setClassName('bg-ruby-light');
+        break;
+      default:
+        setClassName('');
+    }
+  }, [problemInfo.level]);
 
   return (
     <Card

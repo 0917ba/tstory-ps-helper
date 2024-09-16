@@ -20,7 +20,7 @@ export default function Page() {
           </Button>
         </div>
       </div>
-      <ProblemCardWrapperServer problemNumbers={[10000, 20000, 30101, 22222]} />
+      <ProblemCardWrapperServer problemNumbers={[1000, 1002, 1005, 1006]} />
     </main>
   );
 }
