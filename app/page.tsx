@@ -1,6 +1,6 @@
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import ProblemCardWrapper from '@/components/ProblemCardWrapper';
+import ProblemCardWrapper from '@/components/\bproblem-card-wrapper';
 
 export default function Page() {
   return (
