@@ -3,13 +3,18 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { ItemTypes } from '@/lib/dnd';
 import { cn } from '@/lib/utils';
+import { ProblemInfo } from '@/types/solved';
 import { useDrag } from 'react-dnd';
 
 interface ProblemCardProps {
   className?: string;
+  problemInfo: ProblemInfo;
 }
 
-export function ProblemCard({ className }: { className?: string }) {
+export function ProblemCardClient({
+  className,
+  problemInfo,
+}: ProblemCardProps) {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: ItemTypes.CARD,
     collect: (monitor) => ({
@@ -24,8 +29,8 @@ export function ProblemCard({ className }: { className?: string }) {
     >
       <CardContent className="p-6 space-y-4">
         <div className="space-y-2">
-          <h3 className="text-xl font-semibold">문제번호</h3>
-          <p className="text-muted-foreground">문제내용</p>
+          <h3 className="text-xl font-semibold">{problemInfo.problemId}</h3>
+          <p className="text-muted-foreground">{problemInfo.titleKo}</p>
         </div>
       </CardContent>
     </Card>

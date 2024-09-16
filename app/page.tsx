@@ -1,6 +1,6 @@
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import ProblemCardWrapperServer from '@/components/PcWrapperServer';
+import ProblemCardWrapperServer from '@/components/PCWrapperServer';
 
 export default function Page() {
   return (
@@ -20,7 +20,7 @@ export default function Page() {
           </Button>
         </div>
       </div>
-      <ProblemCardWrapperServer problemNumbers={[1, 2, 3]} />
+      <ProblemCardWrapperServer problemNumbers={[10000, 20000, 30101, 22222]} />
     </main>
   );
 }
