@@ -35,3 +35,18 @@ export interface ProblemInfo {
   tags: ProblemTag[];
   metadata: any;
 }
+
+export type Tier =
+  | 'bronze'
+  | 'silver'
+  | 'gold'
+  | 'platinum'
+  | 'diamond'
+  | 'ruby'
+  | 'master'
+  | 'unrated';
+
+export interface ExactTier {
+  tier: Tier;
+  level: number;
+}
