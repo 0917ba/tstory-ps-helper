@@ -5,6 +5,10 @@ import { ItemTypes } from '@/lib/dnd';
 import { cn } from '@/lib/utils';
 import { useDrag } from 'react-dnd';
 
+interface ProblemCardProps {
+  className?: string;
+}
+
 export function ProblemCard({ className }: { className?: string }) {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: ItemTypes.CARD,
