@@ -4,7 +4,8 @@ import ProblemCardWrapperServer from '@/components/PCWrapperServer';
 
 export default function Page() {
   return (
-    <main className=" flex flex-col items-center justify-center h-screen bg-transparent">
+    <main className="flex flex-col items-center h-screen bg-transparent">
+      <div className="mx-auto w-full min-h-28 flex-1 max-h-[40%]"></div>
       <div className="mb-12 flex flex-col items-center gap-10 text-center w-full">
         <h1 className="text-4xl font-bold tracking-tighter">
           🖥️ Tistory PS Helper
@@ -20,7 +21,8 @@ export default function Page() {
           </Button>
         </div>
       </div>
-      <ProblemCardWrapperServer problemNumbers={[1000, 1002, 1005, 1006]} />
+      <ProblemCardWrapperServer problemNumbers={[1000, 1001, 1002, 1003]} />
+      <div className="mx-auto w-full min-h-12 flex-1 max-h-[40%]"></div>
     </main>
   );
 }
